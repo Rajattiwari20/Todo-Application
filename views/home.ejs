@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+    <div id="Container">
+            <h1 class="heading"> MY TODO'S</h1>
+        <div id="Container-section1">
+        <form action="/action/add" method="POST">
+            <div id="description">
+                <h2>Description</h2>
+                <input type="text" name="description" placeholder="What do you need to do?" required>
+            </div>
+
+            <div id="categoryAndDueDate">
+
+                <div id="category">
+                    <h2>category</h2>
+                    <select name="category" id="select-category" >
+                        <option value="">
+                            Choose a category
+                        </option>
+                        <option value="personal">
+                            personal
+                        </option>
+                        <option value="work">
+                            work
+                        </option>
+                        <option value="school">
+                            school
+                        </option>
+                    </select>
+                </div>
+                <div id="deadline">
+                    <h2>due date</h2>
+                    <input type="date" name="deadline">
+                </div>
+
+            </div>
+           
+        </div>
+            <div id="btn">
+                <button type="submit" name="add task" id="addTask" class="btn"> add task</button>
+            </form>
+                <button  name="delete task" id="delTask" class="btn"> delete task</button>
+            </div>
+        <!-- </form> -->
+
+         <div id="Container-section2">
+            <ul>
+                <% for ( i of todo_list ) { %>
+                    <li>
+                        <div class="task">
+                            <h1> <%= i.description %></h1>
+                            <h1 class="task-category" ><%= i.category %></h1>
+                            <h1 class="task-deadline" ><%= i.deadline %></h1>
+                        </div>
+                    </li>
+                <% } %>
+            </ul>
+        </div> 
+        
+    </div>
+</body>
+</html>
