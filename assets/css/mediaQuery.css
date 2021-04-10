@@ -11,6 +11,10 @@
     #delTask{
         font-size: 1.3rem;  
     }
+    
+    #selectAll{
+        font-size: 1.3rem;  
+    }
 }
 
 @media screen and (max-width : 600px){
@@ -73,6 +77,10 @@
     }
     
     #delTask{
+        font-size: 1.1rem;  
+    }
+
+    #selectAll{
         font-size: 1.1rem;  
     }
     
