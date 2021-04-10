@@ -1,5 +1,7 @@
+// require the library
 const mongoose = require('mongoose');
 
+// creating  todoSchema
 const todoSchema = mongoose.Schema({
     description  : {
         type : String,

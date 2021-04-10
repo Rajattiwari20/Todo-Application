@@ -1,5 +1,7 @@
+// to access todoSchema
 const Todo = require('../models/todo');
 
+// add a todo
 module.exports.add = function(req , res){
     Todo.create({
         description : req.body.description,
@@ -10,7 +12,7 @@ module.exports.add = function(req , res){
             console.log("Error : creating Todo");
             return;
         }
-        console.log(newTodo);
+        // console.log(newTodo);
         return res.redirect('back');
     })
     
